@@ -15,8 +15,8 @@ module.exports = function(sails) {
 
         paths: {
 
-          model: path.resolve(__dirname, 'api/models/model'),
-          update: path.resolve(__dirname, 'lib/query/dql/update')
+          update: path.resolve(__dirname, 'lib/query/dql/update'),
+          validate: path.resolve(__dirname, 'lib/query/validate')
         }
       }
     },
@@ -34,8 +34,9 @@ module.exports = function(sails) {
         // Loop through all models
         for (var model in sails.models) {
 
-          // Replace each default update method with a patched update method because we can not access the criteria in `beforeUpdate` (see: https://github.com/balderdashy/waterline/pull/1328)
+          // Replace each default update and validate method with a patched update method because we can not access the criteria in `beforeUpdate` (see: https://github.com/balderdashy/waterline/pull/1328)
           sails.models[model].update = require(config.paths.update);
+          sails.models[model].validate = require(config.paths.validate);
         }
 
         // Initialized
