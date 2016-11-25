@@ -1,0 +1,39 @@
+{
+  "name": "sails-hook-lifecycle",
+  "version": "0.0.2",
+  "description": "Sails hook which extends the builtin lifecycles with criteria.",
+  "author": {
+    "name": "Sebastian Galler",
+    "email": "sg@sg-medien.com"
+  },
+  "bugs": "https://github.com/sg-medien/sails-hook-lifecycle/issues",
+  "contributors": [],
+  "dependencies": {
+    "async": "^2.1.4",
+    "sails-hook-orm": "^1.0.9",
+    "waterline": "^0.11.6"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "homepage": "https://github.com/sg-medien/sails-hook-lifecycle",
+  "keywords": [
+    "sails",
+    "lifecycle",
+    "sails.js",
+    "sails-hook",
+    "hook",
+    "waterline"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sg-medien/sails-hook-lifecycle.git"
+  },
+  "sails": {
+    "isHook": true,
+    "hookName": "lifecycle"
+  }
+}
