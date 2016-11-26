@@ -36,7 +36,7 @@ module.exports = function(sails) {
 
           // Replace each default update and validate method with a patched update method because we can not access the criteria in `beforeUpdate` (see: https://github.com/balderdashy/waterline/pull/1328)
           sails.models[model].update = require(config.paths.update);
-          sails.models[model].validate = require(config.paths.validate);
+          sails.models[model].validate = require(config.paths.validate).validate;
         }
 
         // Initialized
