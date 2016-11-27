@@ -1,6 +1,6 @@
 {
   "name":"sails-hook-lifecycle",
-  "version":"0.0.9",
+  "version":"0.1.0",
   "description":"Sails hook which extends the builtin lifecycles with criteria.",
   "author":{
     "name":"Sebastian Galler",
